@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+        
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="box.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <h1>Welcome to the Job Application Organizer</h1>
+        
+        
+    </head>
+    <body>
+        
+        <div id="boxes" class="horizspace">
+            <form>
+                <input type="text" id="myText" value=""/>
+                
+                <select id="jobapp_status">
+                    <option value="applied" selected="selected">Applied</option>
+                    <option value="rejected">Rejected</option>
+                    <option value="interview">Interview</option>
+                    <option value="offer">Offer</option>
+                    <option value="accepted">Accepted</option>
+                        
+                </select>
+        
+                <input id="addComp" type="button" value="Submit" />    
+                
+            </form>
+            
+            
+            <div id="appliedDiv" class="b1 w3-round-large">
+                <h2>Applied</h2>
+                <div class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <ul id="applied" class="list-group list-group-flush">
+                      <li class="list-group-item" draggable="true" ondragstart="drag(event)">Cras justo odio</li>
+                      <li class="list-group-item" draggable="true">Dapibus ac facilisis in</li>
+                      <li class="list-group-item" draggable="true">Vestibulum at eros</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="rejectedDiv" class="b2 w3-round-large">
+                <h2>Rejected</h2>
+                    
+                <div class="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <ul id="rejected" class="list-group list-group-flush">
+
+                    </ul>
+                </div>
+            </div>
+            <div id="interviewDiv" class="b3 w3-round-large">
+                <h2>Interview</h2>
+                <div class="card">
+                    <ul id="interview" class="list-group list-group-flush" ondrop="drop(event)" ondragover="allowDrop(event)">
+                       
+                    </ul>
+                </div>
+            </div>
+            <div id="offerDiv" class="b4 w3-round-large">
+                <h2>Offer</h2>
+                <div class="card"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <ul id="offer" class="list-group list-group-flush">
+
+                    </ul>
+                </div>
+            </div>
+            <div id="acceptedDiv" class="b5 w3-round-large">
+                <h2>Accepted</h2>
+                
+                <div class="card"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <ul id="accepted" class="list-group list-group-flush">
+
+                    </ul>                   
+                </div>
+            </div>
+           
+        </div>
+    </body>
+    <script src="drag.js"></script>
+    <script src="addElement.js"></script>
+</html>
